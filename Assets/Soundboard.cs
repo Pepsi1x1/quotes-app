@@ -7,7 +7,7 @@ using System;
 public class Soundboard : MonoBehaviour {
 
     public AudioSource Player;
-    public DialogAnimation DialogAnimator;
+    public SummaryDialog Dialog;
     public Soundbite[] Clips;
 
 	// Use this for initialization
@@ -24,9 +24,14 @@ public class Soundboard : MonoBehaviour {
     public void RandomSound()
     {
         Player.Stop();
-        Player.clip = Clips[rand.Next(0, Clips.Length - 1)].Clip;
+        Soundbite sb = Clips[rand.Next(0, Clips.Length - 1)];
+        Player.clip = sb.Clip;
+
+        Dialog.Summary.text = sb.Summary;
+        Dialog.Rebuttal.text = sb.Rebuttal;
+        Dialog.Source.text = sb.Source;
+
         Player.Play();
-        DialogAnimator.In();
     }
 }
 
