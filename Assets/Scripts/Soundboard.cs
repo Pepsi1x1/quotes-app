@@ -34,14 +34,3 @@ public class Soundboard : MonoBehaviour {
         Player.Play();
     }
 }
-
-[Serializable]
-public class Soundbite 
-{
-    public string Name;
-    public AudioClip Clip;
-    public string Source;
-    public DateTime SourceDate;
-    public string Summary;
-    public string Rebuttal;
-}

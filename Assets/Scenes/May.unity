@@ -850,12 +850,7 @@ MonoBehaviour:
   Player: {fileID: 1744348420}
   Dialog: {fileID: 763301850}
   Clips:
-  - Name: General Election
-    Clip: {fileID: 8300000, guid: 0695f8a021b79a64ebe9414cebd398fb, type: 3}
-    Source: BBC News - Broadcast on 3 September 2016
-    Summary: Theresa May repeatedly states that she does not think a snap general
-      election is right for the country.
-    Rebuttal: Theresa May announced a snap General Election on Tuesday, 18 April 2017
+  - {fileID: 11400000, guid: 90223e1341ef35d4bb59beb303965570, type: 2}
 --- !u!82 &1744348420
 AudioSource:
   m_ObjectHideFlags: 0
