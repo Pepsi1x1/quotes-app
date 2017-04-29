@@ -79,3 +79,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Dev Utils
+/.dev-utils/node_modules
+/.dev-utils/*.mp3
+/.dev-utils/*.mp4
