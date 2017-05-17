@@ -10,6 +10,19 @@ public class Soundboard : MonoBehaviour {
     public SummaryDialog Dialog;
     public Soundbite[] Clips;
 
+	private int _soundbiteIndex = 0;
+
+	private int SoundbiteIndex {
+		get {
+			return _soundbiteIndex;
+		}
+		set {
+			_soundbiteIndex = value;
+			if (_soundbiteIndex > Clips.Length - 1)
+				_soundbiteIndex = 0;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -19,12 +32,10 @@ public class Soundboard : MonoBehaviour {
 		
 	}
 
-    System.Random rand = new System.Random();
-
     public void RandomSound()
     {
         Player.Stop();
-        Soundbite sb = Clips[rand.Next(0, Clips.Length - 1)];
+        Soundbite sb = Clips[SoundbiteIndex++];
         Player.clip = sb.Clip;
 
         Dialog.Summary.text = sb.Summary;
